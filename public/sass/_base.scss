@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 3.5rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    @media only screen and (max-width: 56.25em) {
+        font-size: 55%;
+    }
+    @media only screen and (max-width:82.5em) {
+        font-size: 58.8%
+    }
+}

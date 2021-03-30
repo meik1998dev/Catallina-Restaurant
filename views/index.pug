@@ -1,0 +1,215 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;700&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;700&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css' integrity='sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==' crossorigin='anonymous')
+    link(rel='stylesheet' href='css/luxbar.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/main.css')
+    title Catallina
+
+  body
+
+
+
+    // NAVIGATION
+    header#luxbar.luxbar-default
+      input#luxbar-checkbox.luxbar-checkbox(type='checkbox')
+      .luxbar-menu.luxbar-menu-right.luxbar-menu-dark
+        ul.luxbar-navigation
+          li.luxbar-header
+            a.luxbar-brand(href='#')
+              | Catallina
+            label#luxbar-hamburger.luxbar-hamburger.luxbar-hamburger-spin(for='luxbar-checkbox')
+              span
+          li.luxbar-item
+            a(href='#') reserve
+          li.luxbar-item
+            a(href='#') about
+          li.luxbar-item
+            a(href='#') menu
+          li.luxbar-item
+            a(href='#') offers
+          li.luxbar-item
+            a(href='#') contact us
+    //
+      <header>
+      <nav class="main-nav">
+      <a href="" class="logo">Catallina</a>
+      <ul class="nav" id="nav">
+      <li><a href="">reserve</a></li>
+      <li><a href="">about</a></li>
+      <li><a href="">menu</a></li>
+      <li><a href="">offers</a></li>
+      <li><a href="">contact us</a></li>
+      </ul>
+      <a class="nav-icon" id="nav-icon" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+      </a>
+      </nav>
+      </header>
+    // OVERVIEW
+    .overview
+      .left-content
+        div(class='left-content__header')
+          h1 Catallina Restaurant
+          h3 THE BEST EXPERIANCE
+        a(href="#reservation" class='left-content__btn') Make A Reservation
+      .right-content
+        #owl-example.owl-carousel
+          div
+            img(src='/css/images/slide-01.jpg' alt='')
+          div
+            img(src='/css/images/slide-02.jpg' alt='')
+    // ABOUT
+    .about
+      h2 About Us
+      .about-container
+        div(class='about-container__left')
+          h3 We Leave A Delicious Memory For You
+          p
+            | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ipsam, rerum cupiditate pariatur minus quasi. Consequatur,
+            br
+            | possimus voluptates asperiores obcaecati beatae sequi dignissimos vero, optio quae praesentium aspernatur
+            | iure excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa assumenda, quis odio dolorem
+            br
+            | esse tempora sed, velit excepturi nemo cupiditate adipisci mollitia
+            br
+            | tenetur reiciendis corrupti, ad est error alias quam?
+        div(class='about-container__right')
+          img(src='/css/images/slide-03.jpg' alt='')
+    // MENU
+    .menu-section
+      h2 Our Meanu
+      .menu
+        .menu-list
+         h3 MAIN MEAL
+
+         each item in menu
+           if item.kind==="main-meal"
+            .menu-item
+                div(class='menu-item__img')
+                 img(src='/css/images/tab-item-03.png' alt='')
+                div(class='menu-item__inf')
+                 h3=item.name
+                 p=item.integradiants
+                div(class='menu-item__price')
+                 h4=item.price
+
+        .menu-list
+          h3 SOUPS
+          each item in menu
+            if item.kind==="soup"
+                .menu-item
+                    div(class='menu-item__img')
+                     img(src='/css/images/tab-item-03.png' alt='')
+                    div(class='menu-item__inf')
+                     h3=item.name
+                     p=item.integradiants
+                    div(class='menu-item__price')
+                     h4=item.price
+        
+
+        .menu-list
+          h3 DRINKS
+          each item in menu
+            if item.kind==="drink"
+                .menu-item
+                  div(class='menu-item__img')
+                    img(src='/css/images/tab-item-03.png' alt='')
+                  div(class='menu-item__inf')
+                    h3=item.name
+                    p=item.integradiants
+                  div(class='menu-item__price')
+                    h4=item.price
+
+    // TESTIMONIALS
+    .test-section
+      .test
+        h2 Testimonials
+        div(class='test__paragraph')
+          p
+            | “ Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. ”
+        div(class='test__info')
+          div(class='test__img')
+            img(src='/css/images/about_1.jpg' alt='')
+          div(class='test__name')
+            h4 Charles White
+            p CEO, xyz Company
+    // OFFERS
+    .offers-section
+      h2 Our Offers
+      .offer
+        div(class='offer__img')
+          img(src='/css/images/hero_1.jpg' alt='')
+        div(class='offer__info')
+          div(class='offer__info--name')
+            h3 Stake With Lemon
+            h4 Meat / Lemon / Rosemery
+            p For Two Person With Free Beer
+            button.btn Book Now
+          div(class='offer__info--price')
+            h4.new-price 22$
+            h4.old-price
+              strike  30$
+      .offer
+        div(class='offer__img')
+          img(src='/css/images/small.png' alt='')
+        div(class='offer__info')
+          div(class='offer__info--name')
+            h3 Stake With Lemon
+            h4 Meat / Lemon / Rosemery
+            p For Two Person With Free Beer
+            button.btn Book Now
+          div(class='offer__info--price')
+            h4.new-price 22$
+            h4.old-price
+              strike  30$
+    // RESERVATION
+    .reservation-section#reservation
+      h2 Reservation
+      .res
+        form(action='#' class='res__form')
+          .form
+            input(type='text' class='res_input' required='required' placeholder='2/4/2021')
+            input(type='text' class='res_input' required='required' placeholder='11 : 00 AM')
+            select(class='res_select')
+              option(disabled='' selected='') 2 person
+              option 3 person
+              option 4 person
+              option 5 person
+              option 6 person
+          button(class='res__form--btn') Make a Reservation
+    // FOOTER
+    footer.footer
+      div(class='footer__logo')
+        h2
+          | Catallina
+          br
+          | Restaurant
+      div(class='footer__paragraph')
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio.
+      div(class='footer__addresses')
+        .address
+          div(class='address__title') Address
+          div(class='address__number') +964 44 888 1111
+        .address
+          div(class='address__title') Address
+          div(class='address__number') +964 44 888 3333
+        .address
+          div(class='address__title') Address
+          div(class='address__number') +964 44 888 3333
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==' crossorigin='anonymous')
+    script(src='javascript/index.js ')

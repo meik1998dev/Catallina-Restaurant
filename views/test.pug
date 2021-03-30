@@ -1,0 +1,39 @@
+
+h2 MAIN MEAL
+each item in menu
+    if item.kind==="main-meal"
+        .card(style="width:18rem;")
+            img.card-img-top(alt="dsd")
+            .card-body
+                h5.card-title=item.name
+                p.card-text quick example text to build on the card title and make up the bulk of the card's content.
+                a(href='#').btn.btn-primary=item.price
+    else 
+        h2 
+h2 SOUPS 
+each item in menu
+    if item.kind==="soup"
+     .card(style="width:18rem;")
+        img.card-img-top(alt="dsd")
+        .card-body
+            h5.card-title=item.name
+            p.card-text quick example text to build on the card title and make up the bulk of the card's content.
+            a(href='#').btn.btn-primary=item.price
+    else
+        h2 
+
+h2 Drinks 
+each item in menu
+    if item.kind==="drink"
+     .card(style="width:18rem;")
+        img.card-img-top(alt="dsd")
+        .card-body
+            h5.card-title=item.name
+            p.card-text quick example text to build on the card title and make up the bulk of the card's content.
+            a(href='#').btn.btn-primary=item.price
+    else
+        h2 
+
+
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous")

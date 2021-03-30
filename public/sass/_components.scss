@@ -1,0 +1,489 @@
+        h2 {
+            display: flex;
+            justify-content: center;
+            font-family: "Dancing Script", cursive;
+            font-size: 6rem;
+            position: relative;
+            color: #ffd100;
+            margin-bottom: 10rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(81, 81, 81, 0.4); // &::before {
+            //     width: 30px;
+            //     height: 1px;
+            //     content: "";
+            //     position: absolute;
+            //     left: 50px;
+            //     top: 8px;
+            //     background-color: #fb5849;
+            // }
+        }
+        
+        h3 {
+            font-size: 3rem;
+        }
+        
+        /////////////////////////////////////////
+        ////////////////////  NAVIGATION
+        .main-nav {
+            z-index: 10;
+            position: absolute;
+            width: 100%;
+            @media only screen and (max-width: 50em) {
+                flex-wrap: wrap;
+            }
+            .nav {
+                @media only screen and (max-width: 50em) {
+                    flex-direction: column;
+                    width: 100%;
+                    order: 3;
+                    align-items: stretch;
+                    justify-content: center;
+                    padding-right: 0;
+                }
+                flex-direction: row;
+                text-decoration: none;
+                list-style: none;
+                padding-right: 2rem;
+                li {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    padding: 0 2rem;
+                    @media only screen and (max-width: 50em) {
+                        width: 100%;
+                        padding: 3rem 0;
+                        border-bottom: #292929 1px solid;
+                    }
+                    a:visited,
+                    a:link {
+                        cursor: pointer;
+                        color: #d6d6d6;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .logo {
+                color: #ffd100;
+                font-weight: 700;
+                font-family: "Dancing Script", cursive;
+                padding: 2rem 4rem;
+                font-size: 4rem;
+                text-decoration: none;
+            }
+            .nav-icon {
+                display: none;
+                order: 2;
+                color: #b5b5b5;
+                font-size: 3rem;
+                @media only screen and (max-width: 50em) {
+                    display: block;
+                    padding-top: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #292929;
+            transition: ease-out 0.5s;
+        }
+        
+        /////////////////////////////////////////////////
+        //////////  OVERVIEW
+        .overview {
+            height: 100vh;
+            overflow: hidden;
+            .left-content {
+                background-color: #ffee32;
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 30%;
+                justify-content: center;
+                margin-top: 7rem;
+                padding-left: 7rem;
+                padding-right: 3rem;
+                @media only screen and (max-width: 82.5em) {
+                    width: 30%;
+                    position: relative;
+                    z-index: 8;
+                }
+                @media only screen and (max-width: 65.6em) {
+                    order: 2;
+                    width: 100%;
+                    align-items: center;
+                    padding-top: 2rem;
+                    padding-left: 0rem;
+                    margin-top: 0%;
+                }
+                &__header {
+                    color: #202020;
+                    margin-bottom: 4rem;
+                    flex: 0;
+                    h1 {
+                        font-family: "Dancing Script", cursive;
+                        font-size: 5rem;
+                        font-weight: 700;
+                        margin-bottom: 1rem;
+                    }
+                    @media only screen and (max-width: 65.6em) {
+                        margin-bottom: 1rem;
+                        text-align: center;
+                    }
+                }
+                &__btn {
+                    text-decoration: none;
+                    color: #202020;
+                    font-size: 2rem;
+                    padding: 1rem;
+                    text-align: center;
+                    width: 70%;
+                    min-width: 17rem;
+                    border: #202020 solid 3px;
+                    @media only screen and (max-width: 65.6em) {
+                        width: 30rem;
+                    }
+                }
+            }
+            .right-content {
+                @media only screen and (max-width: 82.5em) {
+                    width: 100%;
+                    flex: 0 0 100%;
+                    position: relative;
+                    z-index: 2;
+                }
+                @media only screen and (max-width: 65.6em) {
+                    flex: 0 0 70%;
+                }
+                flex: 0 0 70%;
+                overflow: hidden;
+                .owl-carousel {
+                    @media only screen and (max-width: 82.5em) {
+                        width: 100%;
+                        position: relative;
+                        z-index: 2;
+                    }
+                    height: 100vh;
+                    width: 100%;
+                    overflow: hidden;
+                    img {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
+        
+        /////////////////////////////////////////////////
+        //////////  ABOUT
+        .about {
+            margin-top: 10rem;
+            margin-bottom: 20rem;
+            &-container__left {
+                -webkit-box-shadow: -14px 14px 28px -8px rgba(97, 97, 97, 0.3);
+                box-shadow: -14px 14px 28px -8px rgba(97, 97, 97, 0.3);
+                position: absolute;
+                padding: 2rem;
+                top: 15%;
+                left: 10%;
+                border-radius: 20px;
+                background-color: #ffffff;
+                z-index: 3;
+                width: 50rem;
+                p {
+                    margin-top: 2rem;
+                    font-size: 1.8rem;
+                }
+                @media only screen and (max-width: 65.6em) {
+                    flex: 0 0 100%;
+                    order: 2;
+                    position: relative;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            &-container__right {
+                z-index: 1;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    left: 40rem;
+                    width: 70%;
+                    right: 5rem;
+                    @media only screen and (max-width: 65.6em) {
+                        flex: 0 0 100%;
+                        order: 1;
+                        position: relative;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                    }
+                    border-radius: 8px;
+                    @media only screen and (max-width: 65.6em) {
+                        width: 100%;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+        
+        /////////////////////////////////////////
+        ///////////////// MENU
+        .menu {
+            &-list {
+                min-width: 30rem;
+                flex-grow: 1;
+                margin: 1rem;
+                @media only screen and (max-width: 40.6em) {
+                    margin: 1rem 0.2rem;
+                }
+                border: #e6e6e6 dashed 2px;
+                transition: all 0.2s;
+                padding: 0 1rem;
+                &:hover {
+                    border: #ffd100 dashed 2px;
+                }
+                h3 {
+                    transition: all 0.2s;
+                    text-align: center;
+                    padding: 2rem 0;
+                }
+                .menu-item {
+                    min-width: 15rem;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 3rem 0rem;
+                    transition: all 0.2s;
+                    align-items: baseline;
+                    &:not(:last-child) {
+                        border-bottom: #e6e6e6 dashed 2px;
+                        &:hover {
+                            border-bottom: #ffd100 dashed 2px;
+                        }
+                    }
+                    &:hover {
+                        h3 {
+                            color: #ffd100;
+                        }
+                    }
+                    &__img {
+                        align-self: center;
+                        img {
+                            width: 8rem;
+                            border-radius: 50px;
+                            display: flex;
+                        }
+                    }
+                    &__inf {
+                        padding: 1rem;
+                        p {
+                            font-size: 1.7rem;
+                        }
+                        h3 {
+                            padding: 0;
+                        }
+                    }
+                    &__price {
+                        h4 {
+                            padding: 1rem;
+                            font-size: 2rem;
+                            color: #ffd100;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /////////////////////////////////////////
+        ///////////////// TESTIMONIALS
+        .test-section {
+            .test {
+                margin: 0 auto;
+                max-width: 60rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .test__paragraph {
+                    p {
+                        color: #d6d6d6;
+                        font-size: 2.5rem;
+                    }
+                }
+                .test__info {
+                    color: #d6d6d6;
+                    width: 100%;
+                    padding-top: 2rem;
+                    display: flex;
+                    justify-content: start;
+                    .test__img {
+                        img {
+                            width: 7rem;
+                            height: 7rem;
+                            border-radius: 50%;
+                        }
+                    }
+                    .test__name {
+                        margin-left: 3rem;
+                        align-self: center;
+                        h4 {
+                            font-size: 1.8rem;
+                        }
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /////////////////////////////////////////////////
+        //////////  OFFERS
+        .offers-section {
+            h2 {
+                margin-bottom: 4rem;
+            }
+            .offer {
+                padding: 5rem 0;
+                display: flex;
+                justify-content: space-evenly;
+                &:not(:last-child) {
+                    border-bottom: dashed 1px #dfdfdf;
+                    border-width: 2px;
+                }
+                @media only screen and (max-width: 50em) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &__img {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 47rem;
+                        height: 30rem;
+                    }
+                }
+                &__info {
+                    display: flex;
+                    padding-top: 4rem;
+                    &--name {
+                        margin-right: 3rem;
+                        h3 {
+                            font-weight: 600;
+                            font-size: 3.5rem;
+                            margin-bottom: 2rem;
+                        }
+                        h4 {
+                            font-size: 2.5rem;
+                            font-weight: 200;
+                        }
+                        p {
+                            font-size: 2rem;
+                        }
+                        .btn {
+                            margin-top: 2rem;
+                            font-size: 2.5rem;
+                            padding: 1rem;
+                            text-align: center;
+                            width: 20rem;
+                            border: #202020 solid 3px;
+                        }
+                    }
+                    &--price {
+                        font-size: 4rem;
+                        .old-price {
+                            color: #b5b5b5;
+                        }
+                        .new-price {
+                            margin-bottom: 1rem;
+                            color: #d5c300;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /////////////////////////////////////////////////
+        //////////  RESERVATION
+        .reservation-section {
+            .res {
+                &__form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .form {
+                        display: flex;
+                        flex-wrap: wrap;
+                         ::placeholder {
+                            color: #b5b5b5;
+                            text-align: center;
+                            font-size: 3rem;
+                            color: #b5b5b5;
+                        }
+                        input,
+                        select {
+                            flex-grow: 1;
+                            padding: 1rem;
+                            outline: none;
+                            background: transparent;
+                            margin-right: 1rem;
+                            margin-left: 1rem;
+                            margin-bottom: 1rem;
+                            border: #b5b5b5 1px solid;
+                            color: #b5b5b5;
+                            font-size: 3rem;
+                        }
+                    }
+                    &--btn {
+                        padding: 1rem;
+                        justify-self: center;
+                        margin-top: 2rem;
+                        outline: none;
+                        background: transparent;
+                        margin-right: 2rem;
+                        border: #b5b5b5 1px solid;
+                        color: #ffd100;
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+        
+        //////////////////////////////////////////////////////////
+        ///////////////////////////////  FOOTER
+        .footer {
+            &__logo {
+                flex: 0 0 30%;
+                @media only screen and (max-width: 50em) {
+                    h2 {
+                        margin-bottom: 5rem;
+                    }
+                }
+            }
+            &__paragraph {
+                flex: 0 0 40%;
+                color: #b5b5b5;
+                font-size: 2rem;
+                @media only screen and (max-width: 50em) {
+                    p {
+                        margin-bottom: 5rem;
+                    }
+                }
+            }
+            &__addresses {
+                flex: 0 0 30%;
+                font-size: 2rem;
+                .address {
+                    display: flex;
+                    color: #b5b5b5;
+                    font-size: 2rem;
+                    justify-content: center;
+                    &__title {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }

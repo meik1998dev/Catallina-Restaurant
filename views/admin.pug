@@ -1,0 +1,78 @@
+h1 admin
+
+
+///////////////////  form  ////////////////////////////////
+h2 Add Elements
+
+
+form(method="post" enctype="multipart/form-data")
+    .form-group
+      select(name="option").form-control.form-control-sm
+        option(value="main-meal") Main Meal
+        option(value="soup") Soup
+        option(value="drink") Drink
+
+    .form-group
+      label(for="inputName") Name
+      input(type="text", name="name").form-control#inputName
+    .form-group
+      label(for="inputInteg") Integradiants
+      input(type="text", name="integradiants").form-control#inputInteg
+    .form-group
+      label(for="inputPassword") Price
+      input(type="text",name="price").form-control#inputPassword
+    .form-group
+      label(for="inputPassword") Uploud Image
+      input(type="file",name="image").form-control#inputPassword
+      button(type="submit").btn.btn-primary Submit 
+
+
+///////////////////  Menu  ////////////////////////////////
+
+h2 MAIN MEAL
+each item in menu
+    if item.kind==="main-meal"
+        .card(style="width:18rem;")
+            img.card-img-top(alt="dsd")
+            .card-body
+              h5.card-title=item.name
+              p.card-text=item.integradiants
+              a(href='#').btn.btn-primary=item.price
+              form(action=`/admin/${item._id}`,method="POST")
+                input(type="hidden", name="_method", value="DELETE")
+                button(type="submit").btn.btn-danger delete
+    else 
+        h2 
+h2 SOUPS 
+each item in menu
+    if item.kind==="soup"
+     .card(style="width:18rem;")
+        img.card-img-top(alt="dsd")
+        .card-body
+            h5.card-title=item.name
+            p.card-text=item.integradiants
+            a(href='#').btn.btn-primary=item.price
+            form(action=`/admin/${item._id}`,method="POST")
+              input(type="hidden", name="_method", value="DELETE")
+              button(type="submit").btn.btn-danger delete    
+    else
+        h2 
+
+h2 Drinks 
+each item in menu
+    if item.kind==="drink"
+     .card(style="width:18rem;")
+        img.card-img-top(alt="dsd")
+        .card-body
+            h5.card-title=item.name
+            p.card-text=item.integradiants
+            a(href='#').btn.btn-primary=item.price
+            form(action=`/admin/${item._id}`,method="POST")
+              input(type="hidden", name="_method", value="DELETE")
+              button(type="submit").btn.btn-danger delete
+    else
+        h2 
+
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous")
+

@@ -1,0 +1,667 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 3.5rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 82.5em) {
+  html {
+    font-size: 58.8%;
+  }
+}
+
+.main-nav {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+}
+
+.overview {
+  display: flex;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .overview {
+    flex-direction: column;
+  }
+}
+
+.about-container {
+  margin-top: 10rem;
+  padding: 0 4rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .about-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
+
+.menu-section {
+  margin-top: 10rem;
+}
+
+.menu-section .menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.test-section {
+  margin-top: 10rem;
+  padding: 7rem 0;
+  background: linear-gradient(to right, #000000ac, #202020bb), url("/css/images/todd-quackenbush-x5SRhkFajrA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.offers-section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-section {
+  background: linear-gradient(to right, #202020ee, #202020ea), url("/css/images/download.jpg");
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+  background-color: #202020;
+  padding: 10rem 0;
+  margin-top: 10rem;
+}
+
+.reservation-section .res {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  background-color: #202020;
+  padding: 5rem 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .footer {
+    flex-direction: column;
+    padding: 3.5rem 1.5rem;
+  }
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+  position: relative;
+  color: #ffd100;
+  margin-bottom: 10rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(81, 81, 81, 0.4);
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.main-nav {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (max-width: 50em) {
+  .main-nav {
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav .nav {
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+  padding-right: 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .main-nav .nav {
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+    align-items: stretch;
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+.main-nav .nav li {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .main-nav .nav li {
+    width: 100%;
+    padding: 3rem 0;
+    border-bottom: #292929 1px solid;
+  }
+}
+
+.main-nav .nav li a:visited,
+.main-nav .nav li a:link {
+  cursor: pointer;
+  color: #d6d6d6;
+  text-decoration: none;
+}
+
+.main-nav .logo {
+  color: #ffd100;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  padding: 2rem 4rem;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+.main-nav .nav-icon {
+  display: none;
+  order: 2;
+  color: #b5b5b5;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .main-nav .nav-icon {
+    display: block;
+    padding-top: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #292929;
+  transition: ease-out 0.5s;
+}
+
+.overview {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overview .left-content {
+  background-color: #ffee32;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 30%;
+  justify-content: center;
+  margin-top: 7rem;
+  padding-left: 7rem;
+  padding-right: 3rem;
+}
+
+@media only screen and (max-width: 82.5em) {
+  .overview .left-content {
+    width: 30%;
+    position: relative;
+    z-index: 8;
+  }
+}
+
+@media only screen and (max-width: 65.6em) {
+  .overview .left-content {
+    order: 2;
+    width: 100%;
+    align-items: center;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    margin-top: 0%;
+  }
+}
+
+.overview .left-content__header {
+  color: #202020;
+  margin-bottom: 4rem;
+  flex: 0;
+}
+
+.overview .left-content__header h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .overview .left-content__header {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.overview .left-content__btn {
+  text-decoration: none;
+  color: #202020;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: 70%;
+  min-width: 17rem;
+  border: #202020 solid 3px;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .overview .left-content__btn {
+    width: 30rem;
+  }
+}
+
+.overview .right-content {
+  flex: 0 0 70%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 82.5em) {
+  .overview .right-content {
+    width: 100%;
+    flex: 0 0 100%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 65.6em) {
+  .overview .right-content {
+    flex: 0 0 70%;
+  }
+}
+
+.overview .right-content .owl-carousel {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 82.5em) {
+  .overview .right-content .owl-carousel {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.overview .right-content .owl-carousel img {
+  height: 100vh;
+}
+
+.about {
+  margin-top: 10rem;
+  margin-bottom: 20rem;
+}
+
+.about-container__left {
+  box-shadow: -14px 14px 28px -8px rgba(97, 97, 97, 0.3);
+  position: absolute;
+  padding: 2rem;
+  top: 15%;
+  left: 10%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  z-index: 3;
+  width: 50rem;
+}
+
+.about-container__left p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .about-container__left {
+    flex: 0 0 100%;
+    order: 2;
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.about-container__right {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.about-container__right img {
+  position: relative;
+  left: 40rem;
+  width: 70%;
+  right: 5rem;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 65.6em) {
+  .about-container__right img {
+    flex: 0 0 100%;
+    order: 1;
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 65.6em) {
+  .about-container__right img {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.menu-list {
+  min-width: 30rem;
+  flex-grow: 1;
+  margin: 1rem;
+  border: #e6e6e6 dashed 2px;
+  transition: all 0.2s;
+  padding: 0 1rem;
+}
+
+@media only screen and (max-width: 40.6em) {
+  .menu-list {
+    margin: 1rem 0.2rem;
+  }
+}
+
+.menu-list:hover {
+  border: #ffd100 dashed 2px;
+}
+
+.menu-list h3 {
+  transition: all 0.2s;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.menu-list .menu-item {
+  min-width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0rem;
+  transition: all 0.2s;
+  align-items: baseline;
+}
+
+.menu-list .menu-item:not(:last-child) {
+  border-bottom: #e6e6e6 dashed 2px;
+}
+
+.menu-list .menu-item:not(:last-child):hover {
+  border-bottom: #ffd100 dashed 2px;
+}
+
+.menu-list .menu-item:hover h3 {
+  color: #ffd100;
+}
+
+.menu-list .menu-item__img {
+  align-self: center;
+}
+
+.menu-list .menu-item__img img {
+  width: 8rem;
+  border-radius: 50px;
+  display: flex;
+}
+
+.menu-list .menu-item__inf {
+  padding: 1rem;
+}
+
+.menu-list .menu-item__inf p {
+  font-size: 1.7rem;
+}
+
+.menu-list .menu-item__inf h3 {
+  padding: 0;
+}
+
+.menu-list .menu-item__price h4 {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ffd100;
+}
+
+.test-section .test {
+  margin: 0 auto;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-section .test .test__paragraph p {
+  color: #d6d6d6;
+  font-size: 2.5rem;
+}
+
+.test-section .test .test__info {
+  color: #d6d6d6;
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: start;
+}
+
+.test-section .test .test__info .test__img img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.test-section .test .test__info .test__name {
+  margin-left: 3rem;
+  align-self: center;
+}
+
+.test-section .test .test__info .test__name h4 {
+  font-size: 1.8rem;
+}
+
+.test-section .test .test__info .test__name p {
+  font-size: 1.4rem;
+}
+
+.offers-section h2 {
+  margin-bottom: 4rem;
+}
+
+.offers-section .offer {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.offers-section .offer:not(:last-child) {
+  border-bottom: dashed 1px #dfdfdf;
+  border-width: 2px;
+}
+
+@media only screen and (max-width: 50em) {
+  .offers-section .offer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.offers-section .offer__img {
+  display: flex;
+  justify-content: center;
+}
+
+.offers-section .offer__img img {
+  width: 47rem;
+  height: 30rem;
+}
+
+.offers-section .offer__info {
+  display: flex;
+  padding-top: 4rem;
+}
+
+.offers-section .offer__info--name {
+  margin-right: 3rem;
+}
+
+.offers-section .offer__info--name h3 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.offers-section .offer__info--name h4 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.offers-section .offer__info--name p {
+  font-size: 2rem;
+}
+
+.offers-section .offer__info--name .btn {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+  width: 20rem;
+  border: #202020 solid 3px;
+}
+
+.offers-section .offer__info--price {
+  font-size: 4rem;
+}
+
+.offers-section .offer__info--price .old-price {
+  color: #b5b5b5;
+}
+
+.offers-section .offer__info--price .new-price {
+  margin-bottom: 1rem;
+  color: #d5c300;
+}
+
+.reservation-section .res__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservation-section .res__form .form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reservation-section .res__form .form ::placeholder {
+  color: #b5b5b5;
+  text-align: center;
+  font-size: 3rem;
+  color: #b5b5b5;
+}
+
+.reservation-section .res__form .form input,
+.reservation-section .res__form .form select {
+  flex-grow: 1;
+  padding: 1rem;
+  outline: none;
+  background: transparent;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border: #b5b5b5 1px solid;
+  color: #b5b5b5;
+  font-size: 3rem;
+}
+
+.reservation-section .res__form--btn {
+  padding: 1rem;
+  justify-self: center;
+  margin-top: 2rem;
+  outline: none;
+  background: transparent;
+  margin-right: 2rem;
+  border: #b5b5b5 1px solid;
+  color: #ffd100;
+  font-size: 3rem;
+}
+
+.footer__logo {
+  flex: 0 0 30%;
+}
+
+@media only screen and (max-width: 50em) {
+  .footer__logo h2 {
+    margin-bottom: 5rem;
+  }
+}
+
+.footer__paragraph {
+  flex: 0 0 40%;
+  color: #b5b5b5;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .footer__paragraph p {
+    margin-bottom: 5rem;
+  }
+}
+
+.footer__addresses {
+  flex: 0 0 30%;
+  font-size: 2rem;
+}
+
+.footer__addresses .address {
+  display: flex;
+  color: #b5b5b5;
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.footer__addresses .address__title {
+  margin-right: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
